@@ -1,0 +1,62 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4033664, 2021-03-31T07:43:21-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Kelson-Bold by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/bold/
+ * 
+ * Webfont: Kelson by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/regular/
+ * 
+ * Webfont: Kelson-Light by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/light/
+ * 
+ * Webfont: Kelson-Medium by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/medium/
+ * 
+ * Webfont: Kelson-Thin by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/thin/
+ * 
+ * Webfont: Kelson-ExtraBold by Armasen
+ * URL: https://www.myfonts.com/fonts/armasen/kelson/extra-bold/
+ * 
+ * 
+ * Webfonts copyright: Armasen Typefaces&amp;#x00AE; 2011 - All rights reserved.
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+
+  
+@font-face {
+  font-family: "Kelson";
+  src: url('webFonts/Kelson/font.woff2') format('woff2'), url('webFonts/Kelson/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Kelson-Bold";
+  src: url('webFonts/KelsonBold/font.woff2') format('woff2'), url('webFonts/KelsonBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Kelson-Thin";
+  src: url('webFonts/KelsonThin/font.woff2') format('woff2'), url('webFonts/KelsonThin/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Kelson-Medium";
+  src: url('webFonts/KelsonMedium/font.woff2') format('woff2'), url('webFonts/KelsonMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Kelson-ExtraBold";
+  src: url('webFonts/KelsonExtraBold/font.woff2') format('woff2'), url('webFonts/KelsonExtraBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Kelson-Light";
+  src: url('webFonts/KelsonLight/font.woff2') format('woff2'), url('webFonts/KelsonLight/font.woff') format('woff');
+}
+

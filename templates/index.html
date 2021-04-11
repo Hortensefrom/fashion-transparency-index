@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<form action="/" method="post">
+    <select name="brand">
+        <option disabled selected value="brand">Select a brand</option>
+
+        {% for brand in brands %}
+        <option value="{{ brand }}">{{ brand }}</option>
+        {% endfor %}
+
+    </select>
+</form>
+
+{% endblock%}

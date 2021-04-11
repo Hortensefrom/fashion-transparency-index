@@ -1,0 +1,91 @@
+// Import font
+@font-face {
+    font-family: "ZombieChecklist";
+    src: url("fonts/ZombieChecklistV4.ttf");
+  }
+
+// Theme colors
+$light-grey: #f4f0ed;
+$dark-green: #009a6b;
+$medium-green: #a0d2ad;
+$light-green: #dee7cc;
+$fluo-green:#0DDE29;
+$dark: #212529;
+
+* {
+    font-family: "Kelson";
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: $light-green;
+}
+
+.dropdown-item:hover {
+  background-color: $light-green;
+}
+
+.sub-text {
+  font-family: 'Space Mono', monospace;
+}
+
+.zombie {
+  font-family: "ZombieChecklist";
+}
+
+.smaller {
+  font-size: 1.5rem;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-gradient {
+  background-image: url(../images/gradient.jpeg);
+  background-size: cover;
+}
+
+.bg-draw {
+  background-image: url(../images/bg-draw.png);
+}
+
+.bg-light-green {
+  background-color: $light-green;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255,255,255,0.8);
+}
+
+.stamped_logo {
+  max-height: 130px;
+  transform: rotate(0.03turn);
+}
+
+.icon {
+  max-height: 130px;
+  max-width: 130px;
+}
+
+.btn-hp {
+  background-color: $fluo-green;
+  color: white;
+}
+
+.btn-hp:hover {
+  background-color: white;
+  color: $dark;
+}
+
+.footer-link {
+  color: $dark;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: $dark-green;
+}
