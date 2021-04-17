@@ -1,7 +1,7 @@
 function donut_chart(data) {
-    chart = {
+
     const arcs = pie(data);
-    
+
     const svg = d3.create("svg")
   .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
@@ -31,32 +31,27 @@ function donut_chart(data) {
       .attr("fill-opacity", 0.7)
       .text(d => d.data.value.toLocaleString()));
 
-return svg.node();
+const height = Math.min(width, 500);
+
+arc =  {
+  const radius = Math.min(width, height) / 2;
+  return d3.arc().innerRadius(radius * 0.67).outerRadius(radius - 1)
 }
 
-color = ƒ(i)
-
-color = d3.scaleOrdinal()
+ const color = d3.scaleOrdinal()
     .domain(data.map(d => d.name))
     .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data.length).reverse())
 
-    height = 500
-
-    height = Math.min(width, 500)
-
-    arc = ƒ()
-
-    arc = {
-        const radius = Math.min(width, height) / 2;
-        return d3.arc().innerRadius(radius * 0.67).outerRadius(radius - 1);
-      }
-
-      pie = ƒ(a)
-
-      pie = d3.pie()
+const pie = d3.pie()
     .padAngle(0.005)
     .sort(null)
     .value(d => d.value)
 
-    d3 = require("d3@6")
+d3 = require("d3@6")
+
+return svg.node()
 }
+
+
+
+

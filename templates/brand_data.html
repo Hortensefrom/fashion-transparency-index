@@ -23,21 +23,13 @@
 {{ r[2] }}
 {% endfor %}
 
-<form action="/" method="get"><button>See new brand</button></button>
+<form action="/" method="get"><button>See new brand</button></button></form>
 
-
-<script>
-src="/static/donut_chart.js"
-</script>
 
 
 <script>
-    data = {{ result[0] }}
-    window.addEventListener('load', function () {
-        document.body.querySelector(".index2020").append(final_scores)
-    })
-
-    const final_scores = donut_chart(data[2])
+chart = donut_chart('{{ result[0][2] }}',1-'{{ result[0][2] }}')
+document.querySelector('.index2020').append(chart)
 </script>
 
 {% endblock %}
