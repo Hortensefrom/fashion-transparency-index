@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ result[0][1] }}{% endblock %}
+
+{% block main %}
+
+<h3>{{ result[0][1] }}</h3>
+
+{% for r in result %}
+<div class="index2020">
+
+
+</div>
+
+<div class="indexevol">
+
+
+</div>
+
+
+
+{{ r[1] }}
+{{ r[2] }}
+{% endfor %}
+
+<form action="/" method="get"><button>See new brand</button></button>
+
+
+<script>
+src="/static/donut_chart.js"
+</script>
+
+
+<script>
+    data = {{ result[0] }}
+    window.addEventListener('load', function () {
+        document.body.querySelector(".index2020").append(final_scores)
+    })
+
+    const final_scores = donut_chart(data[2])
+</script>
+
+{% endblock %}
