@@ -1,11 +1,10 @@
-from flask import Flask, flash, redirect, render_template, request, g
+from flask import Flask, flash, redirect, render_template, request, g, json
 import sqlite3
 
 # Configure application
 app = Flask(__name__)
 
-#Configure database
-
+# Query from db
 def execute_query(query, *args):
     db = sqlite3.connect('data.db')
     db.row_factory = sqlite3.Row
@@ -28,4 +27,18 @@ def brand_data():
     if request.method == 'POST':
         brand_name = request.form.get('brand_name')
         result = execute_query('SELECT * FROM brands WHERE name = ?', brand_name)
-        return render_template('brand_data.html', result=result)
+        brand_data = {
+            'name': result[0][1],
+            'section_1': result[0][2],
+            'section_2': result[0][3],
+            'section_3': result[0][4],
+            'section_4': result[0][5],
+            'section_5': result[0][6],
+            'final_scores': result[0][7]
+        }
+        return render_template('brand_data.html', data=brand_data)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')

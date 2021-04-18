@@ -1,17 +1,25 @@
 {% extends "layout.html" %}
 
+{% block title %}Homepage{% endblock %}
+
 {% block main %}
+<main class="container">
+<div class="container-fluid">
 
-<form action="/brand_data" method="post">
-    <select name="brand_name">
-        <option disabled selected value="brand">Select a brand</option>
-        {% for brand in brands %}
-        <option value="{{ brand[0] }}">{{ brand[0] }}</option>
-        {% endfor %}
+    <form action="/brand_data" method="post">
+        <select name="brand_name">
+            <option disabled selected value="brand">Select a brand</option>
+            {% for brand in brands %}
+            <option value="{{ brand[0] }}">{{ brand[0] }}</option>
+            {% endfor %}
+    
+            {{ brands }}
+        </select>
+        <input type="submit" value="See scores">
+    </form>
 
-        {{ brands }}
-    </select>
-    <input type="submit" value="see data">
-</form>
+
+</div>
+</main>
 
 {% endblock %}
