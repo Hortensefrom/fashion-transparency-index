@@ -13,26 +13,26 @@
             <h3 class="my-3">2020 Scores</h3>
 
                 <div class="row">
-                    <div class="graph final_scores col-4">
+                    <div class="graph final_scores col-lg-4">
                         <div class="graph-title center-block">Final Scores</div>
                     </div>
-                    <div class="graph section_1 col-4">
-                        <div class="graph-title">Section 1</div>
+                    <div class="graph section_1 col-lg-4">
+                        <div class="graph-title">1. Policy & Commitments</div>
                     </div>
-                    <div class="graph section_2 col-4">
-                        <div class="graph-title">Section 2</div>
+                    <div class="graph section_2 col-lg-4">
+                        <div class="graph-title">2. Governance</div>
                     </div>
-                    <div class="graph section_3 col-4">
-                        <div class="graph-title">Section 3</div>
+                </div>
+                <div class="row">
+                    <div class="graph section_3 col-lg-4">
+                        <div class="graph-title">3. Traceabilty</div>
                     </div>
-                    <div class="graph section_4 col-4">
-                        <div class="graph-title">Section 4</div>
+                    <div class="graph section_4 col-lg-4">
+                        <div class="graph-title">4. Know, Show, Fix</div>
                     </div>
-                    <div class="graph section_5 col-4">
-                        <div class="graph-title">Section 5</div>
+                    <div class="graph section_5 col-lg-4">
+                        <div class="graph-title">5. Spotlight Issue</div>
                     </div>
-                
-
                 </div>
 
         </div>
@@ -46,55 +46,25 @@
 {% endblock %}
 
 {% block javascript %}
-<script src="/static/js/graph.js"></script>
+<script src="/static/js/donut_chart.js"></script>
 
 <script>
 const data = {{data | tojson}};
 
-var colors = {
-    'dark-green': '#009a6b',
-    'medium-green': '#a0d2ad',
-    'light-green': '#dee7cc',
-    'fluo-green' : '#0DDE29',
-    'dark': '#212529',
-  };
-  
-  var width = "auto";
-  var height = 200;
-  
-  function create_arc(section, data, color) {
+console.log(data)
 
-    // Create an svg element
-    var svg = d3.select(section)
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height)
+for (let key in data) {
+    if (typeof(data[key]) == "string") {
+    data[key] = data[key].replace(/,/,'.')
+    }
+}
 
-    var angle = parseFloat(data.replace(/,/,'.'))*6.28;
-    console.log(angle)
-
-    // Create an arc
-    var arc = d3.arc()
-                .innerRadius(40)
-                .outerRadius(70)
-                .startAngle(0)
-                .endAngle(angle) 
-    
-    // Append arc
-    svg
-      .append('path')
-      .attr('d', arc)
-      .attr('fill', color)
-  
-      return svg;
-  }
-
-  create_arc('.section_1', data['section_1'], colors['light-green'])
-  create_arc('.section_2', data['section_2'], colors['light-green'])
-  create_arc('.section_3', data['section_3'], colors['light-green'])
-  create_arc('.section_4', data['section_4'], colors['light-green'])
-  create_arc('.section_5', data['section_5'], colors['light-green'])
-  create_arc('.final_scores', data['final_scores'], colors['medium-green'])
+donut_chart('.section_1', data['section_1'])
+donut_chart('.section_2', data['section_2'])
+donut_chart('.section_3', data['section_3'])
+donut_chart('.section_4', data['section_4'])
+donut_chart('.section_5', data['section_5'])
+donut_chart('.final_scores', data['final_scores'])
 
 </script>
 {% endblock %}
