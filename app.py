@@ -36,7 +36,9 @@ def brand_data():
             'section_5': result[0][6],
             'final_scores': result[0][7]
         }
-        return render_template('brand_data.html', data=brand_data)
+        brands = execute_query('SELECT name FROM brands')
+        return render_template('brand_data.html', data=brand_data, brands=brands)
+    
 
 
 @app.route('/about')

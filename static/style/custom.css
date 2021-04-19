@@ -63,14 +63,14 @@ nav a:hover {
   max-width: 130px;
 }
 
-.btn-hp {
-  background-color: #0DDE29;
+.btn-primary-mgreen {
+  background-color: #a0d2ad;
   color: white;
 }
 
-.btn-hp:hover {
+.btn-primary-mgreen:hover {
   background-color: white;
-  color: #212529;
+  color: #a0d2ad;
 }
 
 .footer-link {
@@ -80,11 +80,5 @@ nav a:hover {
 .footer-link:hover {
   text-decoration: none;
   color: #009a6b;
-}
-
-.center {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*# sourceMappingURL=custom.css.map */
