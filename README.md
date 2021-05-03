@@ -10,10 +10,11 @@ simplement le niveau de transparence d'une marque donnée :
 
 DATASET
 
-Le jeu de données utilisé est en accès libre sur le site Fashion Revolution :
-Afin de le rendre utilisable dans le cadre du projet, la data a été cleané et formaté en .csv, puis en SQL.
+Le jeu de données utilisé est en accès libre sur le site Fashion Revolution : https://www.fashionrevolution.org/about/transparency/
+
+Afin de le rendre utilisable dans le cadre du projet, la data a été cleané et formaté en .csv. Le fichier .db a ensuite été créé puis manipulé avec SQLite.
 
 OUTILS UTILISES
 
-Les librairies utilisées sont Flask et SQLite.
+Les librairies utilisées sont Flask, SQLite et D3.js.
 
